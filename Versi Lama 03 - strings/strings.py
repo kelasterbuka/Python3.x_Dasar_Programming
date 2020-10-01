@@ -23,3 +23,7 @@ print(text8)
 print(5*"wk")
 print('kue' 'pukis')
 print(text1 + text2)
+print("completion of the code")
+# F strings are the part of printing the data in the print statement
+a=10
+print(f"hello i have {a} rs to buy that")
