@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 28,
+    "terminal.integrated.fontSize": 18,
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Noctis Minimus",
+    "editor.minimap.enabled": false,
+    "python.pythonPath": "/Users/faqihza/.pyenv/versions/3.9.1/bin/python"
+}
