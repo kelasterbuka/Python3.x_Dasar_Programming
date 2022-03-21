@@ -1,59 +1,81 @@
-# Operasi dan Memanipulasi String
+# operator dalam bentuk methods
 
-# 1. Menyambung String (concatenate)
-nama_pertama = "Ucup"
-nama_tengah = "D"
-nama_akhir = "Fame"
+## merubah case pada string
 
-nama_lengkap = nama_pertama + nama_tengah + nama_akhir
-print(nama_lengkap)
+# merubah semua ke upper case
+salam = "bro!"
+print("normal " + salam)
+salam = salam.upper()
+print("upper " + salam)
 
-nama_lengkap = nama_pertama + " " + nama_tengah + "'" + nama_akhir
-print(nama_lengkap)
+# merubah semua ke lower case
+alay = "aKu KeCe AbieeZZZ"
+print("normal " + alay)
+alay = alay.lower()
+print("lower " + alay)
 
-# 2. Menghitung panjang string
-panjang = len(nama_lengkap)
-print("panjang " + nama_lengkap + " adalah " + str(panjang))
+## method is, untuk pengecekan
 
-# 3. operator untuk string
+# contoh isupper()
+salam = "SIST"
+apakah_upper = salam.isupper()
+print(salam + " is upper? " + str(apakah_upper))
+salam = salam.lower()
+apakah_upper = salam.isupper()
+print(salam + " is upper? " + str(apakah_upper))
 
-# cek apakah ada komponen pada sebuah string
-d = "d"
-status = d in nama_lengkap
-print("apakah " + d + " ada di " + nama_lengkap + ", " + str(status))
+# islower() <- untuk pengecekan apakah lower case semua
+# isalpha() <- untuk mengecek apakah huruf semua
+# isalnum() <- apakah huruf dan angka
+# isdecimal() <- apakah numeric
+# isspace() <- apakah isinya spasi, tab dan enter (newline \n)
+# istitle() <- huruf pertama setiap kata upper case
 
-D = "D"
-status = D in nama_lengkap
-print("apakah " + D + " ada di " + nama_lengkap + ", " + str(status))
+judul = "It Is Okay To Not Be Orkay"
+cek_judul = judul.istitle()
+print(judul + " is title? " + str(cek_judul))
 
-x = "x"
-status = x not in nama_lengkap
-print("apakah " + x + " tidak ada di " + nama_lengkap + ", " + str(status))
+# startwith() dan endwith() <-- keren
 
-# mengulang string
-print("wk"*100)
-print(100*"wk")
+cek_start = "Sangjangnim Oppa".startswith("Sangjangnim")
+print("start " + str(cek_start))
+cek_end = "Sangjangnim Oppak".endswith("Oppak")
+print("end " + str(cek_end))
 
-# indexing
-print("index ke-0 : " + nama_lengkap[0]) # dimulai dari 0
-print("index ke-6 : " + nama_lengkap[6]) # index bebas
-print("index ke-(-1) : " + nama_lengkap[-1]) # indexing dari dibelakang
-print("index ke-[6,8) : " + nama_lengkap[6:8]) # dimulai dari index 6 sampai sebelum 8
-print("index ke-[0,2,4,6,8] : " + nama_lengkap[0:10:2]) # diambil index 0,2,4,6,8
+# join() dan split() <-- buat orang males
 
-# item paling kecil
-print("nilai terkecil : " + min(nama_lengkap))
-# item paling besar
-print("nilai terbesar : " + max(nama_lengkap))
+pisah = ['aku','sayang','kamu']
+gabungan = ' ehm '.join(pisah)
+print(pisah)
+print(gabungan)
 
-ascii_code = ord(" ")
-print("ASCII number dari spasi : " + str(ascii_code))
-data = 117
-print("Character dari ascii code 117 : " + chr(data))
+gabungan = "naik vespa keliling kota"
+pisah = gabungan.split()
+print(gabungan)
+print(pisah)
 
-# 4. operator dalam bentuk method
+gabungan = "naikehmvespaehmkelilingehmkota"
+pisah = gabungan.split("ehm")
+print(gabungan)
+print(pisah)
 
-data = "otong surotong pararotong"
-jumlah = data.count("o")
-print("jumlah o di " + data + " : " + str(jumlah))
+# alokasi karakter
+print("'kiri      '")
 
+kanan = "kanan".rjust(20) # rata kanan dengan 20 karakter
+print("'" + kanan + "'")
+
+kiri = "kiri".ljust(20) # rata kiri dengan 20 karakter
+print("'" + kiri + "'")
+
+tengah ="tengah".center(20) # rata tengah dengan 20 karakter
+print("'" + tengah + "'")
+
+tengah ="tengah".center(20,'-') # rata tengah dengan 20 karakter
+print("'" + tengah + "'")
+
+# kebalikan dari alokasi karakter
+kanan = kanan.strip()
+print("'" + kanan + "'")
+tengah = tengah.strip('-')
+print("'" + tengah + "'")
