@@ -11,7 +11,7 @@ angka = int(input("masukan angka: "))
 
 print("data = ",angka,",type =",type(angka))
 
-bagaimana dengan boolean
+#bagaimana dengan boolean
 biner = bool(int(input("masukan nilai boolean: ")))
 
 print("data = ",biner,",type =",type(biner))
